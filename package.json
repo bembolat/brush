@@ -28,7 +28,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp style",
-    "start": "gulp style && gulp serve"
+    "start": "gulp start"
   },
   "browserslist": [
     "last 2 versions",

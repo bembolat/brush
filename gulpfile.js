@@ -26,7 +26,7 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
-gulp.task("serve", ["style"],function() {
+gulp.task("serve", function() {
   server.init({
     server: "source/",
     notify: false,
@@ -37,7 +37,7 @@ gulp.task("serve", ["style"],function() {
 
   gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("style"));
   gulp.watch("source/*.html").on("change", server.reload);
-})
+});
 
   gulp.task("start", gulp.series("style", "serve"));
 
