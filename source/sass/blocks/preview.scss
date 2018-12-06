@@ -1,0 +1,146 @@
+.preview {
+        &::before {
+        @include pseudo-element(100%, 100%);
+        background: rgba(24,44,61,.8);
+        top: 0;
+        left: 0;
+      }
+  &__wrap {
+    position: absolute;
+    width: 293px;
+    margin: 0 auto;
+    text-align: center;
+    transform:  translate(-50%,-50%);
+    left: 50%;
+    top: 270px;
+    z-index: 2;
+  }
+  &__title {
+    font-family: "Playfire Display";
+    @include font(48px, 49px, 700);
+    color: $white;
+  }
+  &__text {
+    width: 293px;
+    @include font(18px, 24px, 400);
+    color: $white;
+    @include reset;
+    margin: 0 auto;
+  }
+  &__link {
+    display: block;
+    padding: 22px 0;
+    width: 210px;
+    margin: 0 auto;
+    margin-top: 35px;
+    background: $orange;
+    text-align: center;
+    @include font(14px,14px, 700);
+    color: $white;
+    text-transform: uppercase;
+  }
+  &__social {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .preview {
+    &__title {
+      font-size: 100px;
+      line-height: 100px;
+    }
+    &__wrap {
+      margin-top: 240px;
+      width: 696px;
+    }
+    &__text {
+      @include font(26px,28px, 400);
+      width: 580px;
+    }
+    &__link {
+      padding: 46px 0;
+      width: 420px;
+      margin-top: 64px;
+      @include font(30px,30px,700);
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .preview {
+    position: relative;
+    width: 990px;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 2;
+    &::before {
+       display: none;
+    }
+    &__wrap {
+    position: static;
+    @include reset;
+    width: 430px;
+    margin-top: 140px;
+    left: 0;
+    transform: none;
+    text-align: left;
+    padding-left: 90px;
+    }
+    &__title {
+      @include font(60px,60px,700);
+    }
+    &__text {
+      width: 350px;
+      @include font(14px,20px,700);
+      @include reset;
+    }
+    &__link {
+      position: relative;
+      width: 277px;
+      padding: 23px 0;
+      padding-left: 33px;
+      @include font(15px,15px,700);
+      margin-left: 0;
+      text-align: left;
+        &::after {
+          @include pseudo-element(40px,10px);
+          background: url(..//img/cursor.png) no-repeat center;
+          top: 26px;
+          right: 25px;
+        }
+    }
+    & .social__list {
+      width: 116px;
+      margin-top: 165px;
+    }
+    & .social__image--vk {
+      width: 14px;
+      height: 10px;
+    }
+    & .social__image--inst {
+      width: 14px;
+      height: 14px;
+    }
+    & .social__image--fb {
+      width: 7px;
+      height: 14px;
+    }
+    &__social {
+      display: block;
+    }
+    &__link {
+      margin-top: 40px;
+      background-color: transparent;
+      border: 1px solid $white;
+      &:hover {
+        background: $orange;
+      }
+    }
+    &__text {
+      width: 330px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+  }
+}

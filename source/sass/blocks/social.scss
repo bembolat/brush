@@ -1,0 +1,10 @@
+.social {
+  z-index: 3;
+  &__list {
+    @include reset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+  }
+}

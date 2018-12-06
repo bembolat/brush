@@ -1,3 +1,131 @@
 .slider-bar {
-    
+    &__list {
+      width: 100%;
+      padding: 0;
+      height: 580px;
+      white-space: nowrap;
+      overflow-y: hidden;
+      overflow-x: auto;
+      scroll-snap-type: mandatory;
+      scroll-snap-destination: 50% 0;
+    }
+    &__item {
+      position: relative;
+      display: inline-block;
+      height: 512px;
+ 
+    }
+    &__tab {
+      position: absolute;
+      display: block;
+      @include font(18px,20px,700);
+      color: $black;
+      bottom: -50px;
+      left: 20%;
+      z-index: 5;
+    }
+    &__button {
+      display: none;
+    }
+    &__image {
+      height: 100%;
+      max-height: 100%;
+      scroll-snap-coordinate: 50% 0;
+    }
+}
+
+@media (min-width: 768px) {
+  .slider-bar {
+    &__tab {
+      left: 30%;
+      bottom: -60px;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .slider-bar {
+    width: 1156px;
+    margin: 0 auto;
+    &__tab {
+      left: -30px;
+      bottom: 90px;
+      transform: rotate(-90deg);
+      color: $white;
+      @include font(14px,14px,300);
+      letter-spacing: 1px;
+    }
+    &__list {
+      overflow: hidden;
+    }
+    &__item {
+      margin-right: -5px;
+      overflow: hidden;
+      &::before {
+        @include pseudo-element(100%, 100%);
+        display: block;
+        background-color: rgba(24, 44, 61, 0.8);
+        border: 1px solid rgba(24, 44, 61, 0.9);
+      }
+      &:hover:before {
+      display: none;  
+      }   
+      &:hover .slider-bar__button {
+        width: 94px;
+        height: 94px;
+        background-color: rgba(248,162,90,.9);
+      }
+      &:hover .slider-bar__title,
+      &:hover .slider-bar__tab {
+        display: none;
+      }
+    }
+    &__title {
+        position: absolute;
+        display: block;
+        top: 3%;
+        left: 26px;
+        width: 164px;
+        @include font(16px,20px,300);
+        color: $white;
+        z-index: 4;
+        white-space: normal;
+    } 
+    &__item .slider-bar__button {
+      position: absolute;
+      display: block;
+      width: 84px;
+      height: 84px;
+      border: none;
+      border-radius: 50%;
+      background-color: #a9784a;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      cursor: pointer;
+        &::after,&::before {
+          @include pseudo-element(30px,2px);
+          background-color: $white;
+          left: 32%;
+          top: 47%;
+        }
+        &::after {
+          transform: rotate(-90deg);
+          height: 2px;
+        }
+        &:hover {
+          background-color: $orange;
+          border: 1px solid $orange;
+          &::before {
+            transform: rotate(-90deg);
+            transition: transform 0.5s;
+          }
+          &::after {
+            will-change: transform;
+            transform: rotate(180deg);
+            transition: transform 1s;
+          }
+        }
+    } 
+  }
 }

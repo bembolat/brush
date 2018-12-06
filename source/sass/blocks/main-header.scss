@@ -1,0 +1,41 @@
+.main-header {
+  height: 608px;
+  position: relative;
+  background-color: $blue;
+  background: url(..//img/slide-1-mobile@1x.jpg) top center no-repeat; 
+  background-size: 100% 608px;
+  @media (min-resolution: $retina-dpi), (max-resolution: $retina-dppx) {
+    background: url(..//img/slide-1-mobile@2x.jpg) top center no-repeat; 
+    background-size: 100% 608px;
+  }
+    &__menu {
+      margin: 0 15px;
+    }
+}
+
+@media (min-width: $tablet) {
+  .main-header {
+    height: 1112px;
+    background: url(..//img/slide-1-tablet@1x.jpg) top center no-repeat; 
+    background-size: 100% 1112px;
+    @media (min-resolution: $retina-dpi), (max-resolution: $retina-dppx) {
+    background: url(..//img/slide-1-tablet@2x.jpg) top center no-repeat; 
+    background-size: cover;
+  }
+  &__menu {
+    margin: 0 36px;
+  }
+}
+}
+
+@media (min-width: $desktop) {
+  .main-header {
+    background-image: none;
+    height: 769px;
+    z-index: 0;
+    &__menu {
+      max-width: 1360px;
+      margin: 0 auto;
+    }
+  }
+}

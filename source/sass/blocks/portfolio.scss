@@ -1,3 +1,71 @@
 .portfolio {
-    
+  margin-top: 80px;
+    &__menu {
+      width:293px;
+      margin: 0 auto;
+    }
+    &__title {
+      width: 293px;
+      margin: 0 auto;
+      text-align: center;
+      font-family: "Playfair Display";
+      @include font(45px,50px,700); 
+      color: $blue-font;    
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      @include reset;
+      margin-top: 40px;
+    }
+    &__link {
+      @include font(22px,40px,400);
+      color: rgba(0,32,58,.5);
+      letter-spacing: 1px;
+      &--active {
+        color: $blue-font;
+        font-weight: 700;
+      }
+    }
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    &__menu {
+      width: 694px;
+    }
+      &__list {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      &__title {
+        width: 694px;
+        text-align: left;
+      }
+    }
+}
+
+@media (min-width: 1150px) {
+  .portfolio {
+    margin-top: -164px;
+    &__menu {
+      width: 1152px;
+    }
+      &__list {
+        justify-content: flex-start;
+      }
+      &__title {
+        width: 1152px;
+      }
+      &__item {
+        margin-right: 60px;
+      }
+      &__link {
+        font-size: 18px;
+        padding: 10px 0;
+        &--active {
+        border-bottom: 2px solid $black; 
+        }
+      }
+    }
 }

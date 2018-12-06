@@ -1,0 +1,15 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 145px;
+  &__item {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #cdd3cf;
+    cursor: pointer;
+  }
+  & input:checked + .controls__item {
+    background-color: $black;
+  }
+}

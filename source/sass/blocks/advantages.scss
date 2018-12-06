@@ -1,0 +1,82 @@
+.advantages {
+  &__list {
+    width: 293px;
+    @include reset;
+    padding-top: 40px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  &__number {
+    font-family: "Playfair Display";
+    @include font(85px,85px,700);
+    color: rgba(254,160,82, .3);
+  }
+  &__text {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: $grey-font;
+  }
+}
+
+@media (min-width: $tablet) {
+  .advantages {
+    &__list {
+      width: 696px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-right: 1px solid #f1efe9;
+      border-left: 1px solid #f1efe9;
+    }
+    &__item {
+      width: 347px;
+      padding-left: 2px;
+      border-right: 1px solid #f1efe9;
+      &:nth-child(even) {
+        margin-top: 160px;
+ 
+        border-right: 0;
+      }
+      &:nth-child(3) {
+        height: 636px;
+      }
+    }
+    &__text {
+      width: 271px;
+    }
+    &__title {
+      width: 271px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .advantages {
+    margin-top: -130px;
+    
+    &__list {
+      width: 1157px;
+      min-height: 990px;
+    }
+    &__item {
+      width: 288px;
+      padding-top: 187px;
+      &:nth-child(2) {
+        border-right: 1px solid #f1efe9;
+      }
+      &:nth-child(4) {
+        border-left: 1px solid #f1efe9;
+      }
+      &:nth-child(3) {
+        border-right: 0;
+      }
+      &:nth-child(even) {
+        margin-top: 0;
+        padding-top: 337px;
+      }
+    }
+  }
+}
