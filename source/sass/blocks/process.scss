@@ -1,3 +1,85 @@
 .process {
-    
+    &__wrap {
+      width: 302px;
+      margin: 0 auto;
+    }
+    &__list {
+      padding: 0;
+    }
+    &__title {
+      font-family: "Playfair Display";
+      @include font(45px, 45px, 700);
+      text-align: center;
+      color: $blue-font;
+    }
+    &__head {
+      position: relative;
+      @include font(24px, 24px, 700);
+              &::before {
+          @include pseudo-element(44px,1px);
+          background-color: $black;
+          bottom: -11px;
+        }
+    }
+    &__text {
+      font-size: 18px;
+      color: $grey-font;
+    }
+}
+
+@media (min-width: $tablet) {
+  .process {
+    &__wrap {
+      width: 694px;
+      min-height: 900px;
+      padding-top: 120px;
+      border-right: 1px solid #f1efe9;
+      border-left: 1px solid #f1efe9;
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      counter-reset: myCounter;
+    }
+    &__item {
+      position: relative;
+      max-width: 300px;
+      padding-left: 46px;
+      &::before {
+        position: absolute;
+        top: 25px;
+        left: 10px;
+  counter-increment: myCounter;
+  content:counter(myCounter);
+  color: $black;
+  border-radius: 50%;
+  background: #fde5d1;
+  display: block;
+  font-size: 10px;
+  line-height: 19px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+}
+    }
+    &__head {
+      font-size: 22px;
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &__title {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .process {
+    &__wrap {
+      width: 1154px;
+      min-height: 740px;
+    }
+  }
 }

@@ -13,7 +13,9 @@
       position: relative;
       display: inline-block;
       height: 512px;
- 
+        &:last-child {
+        display: none;
+      }
     }
     &__tab {
       position: absolute;
@@ -57,8 +59,11 @@
     }
     &__list {
       overflow: hidden;
+      display: flex;
+      justify-content: space-between;
     }
     &__item {
+      width: 100%;
       margin-right: -5px;
       overflow: hidden;
       &::before {
@@ -68,7 +73,8 @@
         border: 1px solid rgba(24, 44, 61, 0.9);
       }
       &:hover:before {
-      display: none;  
+      background-color: transparent;
+      transition: all 0.7s;  
       }   
       &:hover .slider-bar__button {
         width: 94px;
@@ -79,6 +85,12 @@
       &:hover .slider-bar__tab {
         display: none;
       }
+      &:last-child {
+        display: inline-block;
+      }
+    }
+    &__image {
+      width: 100%;
     }
     &__title {
         position: absolute;

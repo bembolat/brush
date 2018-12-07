@@ -1,3 +1,147 @@
 .service {
-    
+    width: 293px;
+    margin: 0 auto;
+    &__title {
+      font-family: "Playfair Display";
+      @include font(45px,45px,700);
+      width: 100%;
+      text-align: center;
+      &--footer {
+        display: none;
+      }
+    } 
+    &__list {
+      @include reset;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__link {
+      padding: 22px 0;
+      @include font(22px,22px,300);
+      color: rgba(0, 32, 58, 0.5);
+      &--active {
+        color: $blue-font;
+        font-weight: 700;
+      }
+    }
+    &__item {
+      padding: 22px 0;
+      font-weight: 700;
+    }
+    &__text {
+      @include font(20px,30px,300);
+      color: $grey-font;
+    }
+    &__consultation {
+      margin-top: 30px;
+    }
+    &__button {
+      border: 0;
+      background: 0 0;
+      display: block;
+      margin: 0 auto;
+      background-color: $white;
+      border: 2px solid $black;
+      color: $blue-font;
+      text-transform: uppercase;
+      @include font(15px,15px,700);
+      width: 217px;
+      padding: 24px 0;
+      letter-spacing: 1px;
+    }
+    &__block {
+      display: none;
+    }
+    &__span {
+      display: none;
+    }
+}
+
+@media (min-width: $tablet) {
+  .service {
+    width: 695px;
+    border-right: 1px solid #f1efe9;
+    border-left: 1px solid #f1efe9;
+  &__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__title {
+    text-align: left;
+    &--footer {
+    display: block;
+    font-size: 30px;
+  }
+  }
+  &__text {
+    width: 480px;
+    font-size: 18px;
+  }
+  &__item {
+    width: 50%;
+    text-align: left;
+  }
+  &__consultation {
+    position: relative;
+  }
+  &__button {
+    margin: 0;
+    width: 339px;
+    font-size: 18px;
+  }
+  &__span {
+    position: absolute;
+    display: block;
+    font-size: 22px;
+    right: 5px;
+    top: -190px;
+  }
+}
+ }
+
+@media (min-width: $desktop) {
+  .service {
+    width: 1155px;
+    &__wrap {
+      display: flex;
+    }
+    &__list {
+      width: 289px;
+      flex-direction: column;
+      height: 100%;
+    }
+    &__item {
+      width: 197px;
+      padding-bottom: 26px;
+      &--active {
+        margin-left: 30px;
+      }
+    }
+    &__link {
+      font-size: 18px;
+      &:hover {
+        color: rgba(0,32,58,.8);
+        font-weight: 700;
+      }
+    }
+    &__span {
+      top: -108px;
+    }
+    &__consultation {
+      width: 217px;
+      margin-left: auto;
+      margin-top: -90px;
+    }
+    &__button {
+      width: 217px;
+      font-size: 15px;
+      cursor: pointer;
+      &:hover {
+      background-color: rgba(0,0,0,.9);
+      color: $white;
+      transition: all 0.7s;
+      }
+    }
+  }
 }

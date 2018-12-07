@@ -1,3 +1,106 @@
 .video {
-    
+  position: relative;
+  margin-top: 110px;
+    &::before {
+       @include pseudo-element(100%,100%);
+       display: block;
+       background-color: rgba(24, 44, 61, 0.8);
+       z-index: 1;
+    }
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 622px;
+    background: url(..//img/video-tablet@1x.jpg) no-repeat top center;
+    @media (min-resolution: $retina-dpi), (max-resolution: $retina-dppx) {
+      background: url(..//img/video-tablet@2x.jpg) no-repeat top center;
+      background-size: cover;
+    }
+    background-size: cover;
+  }
+  &__text {
+    position: absolute;
+    width: 293px;
+    color: $white;
+    left: 50%;
+    top: 55%;
+    @include font(22px,30px,400);
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 2;
+  }
+    &__button {
+      @include reset;
+      position: absolute;
+      vertical-align: middle;
+      width: 50px;
+      height: 50px;
+      border: 0 ;
+      border-radius: 50%;
+      background-color: $orange;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      top: 45%;
+      text-align: center;
+      cursor: pointer;
+      z-index: 2;
+      & img {
+        padding-left: 5px;
+        padding-top: 5px;
+      }
+    }
+}
+
+@media (min-width: $tablet) {
+  .video {
+    margin-top: 190px;
+    &__wrap {
+      height: 814px;
+    }
+    &__button {
+      width: 130px;
+      height: 130px;
+      & img {
+        width: 30px;
+        height: 37px;
+      }
+    }
+    &__text {
+      top: 58%;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .video {
+    max-width: 1154px;
+    margin: 0 auto;
+    margin-top: 136px;
+      &:hover::before {
+        background-color: transparent;
+        transition: all 1s;
+
+      }
+    &__wrap {
+      height: 600px;
+      background: url(..//img/video-desktop@1x.jpg) no-repeat top center;
+      @media (min-resolution: $retina-dpi), (max-resolution: $retina-dppx) {
+      background: url(..//img/video-desktop@2x.jpg) no-repeat top center;
+      background-size: cover;
+    }
+    background-size: cover;
+    }
+    &__button {
+      width: 87px;
+      height: 87px;
+      &:hover {
+      width: 95px;
+      height: 95px;
+      }
+    }
+    &__text {
+      width: 460px;
+      font-size: 18px;
+    }
+  }
 }

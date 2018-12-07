@@ -93,3 +93,14 @@ input[type=radio].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+button {
+  outline: 0;
+}
+.show {
+  display: block !important;
+}
+
+.show-flex {
+  display: flex !important;
+}

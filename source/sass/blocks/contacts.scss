@@ -1,0 +1,153 @@
+.contacts {
+  padding-bottom: 90px;
+  background: url(..//img/kitchen-tablet@1x.jpg) no-repeat top center;
+  background-size: cover;
+  @media (min-resolution: retina-dpi), (max-resolution: retina-dppx) {
+    background: url(..//img/kitchen-tablet@2x.jpg) no-repeat top center;
+    background-size: cover;
+  }
+  &__request {
+    width: 293px;
+    margin: 0 auto;
+    padding-top: 70px;
+  }
+  &__title {
+    font-family: "Playfair Display";
+    @include font(45px,50px,700);
+    text-align: center;
+    color: $white;
+  }
+  &__text {
+    font-size: 18px;
+    color: rgba(255,255,255,.8);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  & input[type=text] {
+    width: 100%;
+    padding-bottom: 8px;
+    margin-bottom: 44px;
+    background-color: transparent;
+    color: rgba(255,255,255,.8);
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #bcafa5;
+      &::-webkit-input-placeholder {
+        color: rgba(255,255,255,.8);
+      }
+      &:focus::-webkit-input-placeholder {color: transparent}
+      :focus::-moz-placeholder          {color: transparent}
+      :focus:-moz-placeholder           {color: transparent}
+      :focus:-ms-input-placeholder      {color: transparent}
+  }
+  &__group {
+    border: 0;
+  }
+  &__button {
+    display: block;
+    width: 270px;
+    margin: 0 auto;
+    border: 0;
+    background: rgba(248,162,90,.7);
+    background: $orange;
+    padding: 26px 0;
+    border-radius: 4px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $white;
+  }
+  &__notification {
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 16px;
+    text-align: center;
+    line-height: 18px;
+    color: rgba(255,255,255,.7);
+    font-size: 16px;
+  }
+  &__wrap-image {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet) {
+  .contacts {
+    &__request {
+      width: 570px;
+    }
+    &__form {
+      position: relative;
+      padding-top: 50px;
+      width: 460px;
+      margin: 0 auto;
+    }
+    &__button {
+      width: 435px;
+      font-size: 18px;
+    }
+    &__image {
+      position: absolute;
+      top: 60px;
+      right: 15px;
+      &--phone {
+        top: 132px;
+      }
+      &--email {
+        top: 210px;
+      }
+    }
+    &__notification {
+      width: 435px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .contacts {
+    width: 1154px;
+    margin: 0 auto;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    background-image: none;
+    background-color: #182c3d;
+    &__wrap-image {
+      display: block;
+      width: 50%;
+      background: url(..//img/kitchen-desktop@1x.jpg) no-repeat top center;
+      background-size: cover;
+      @media (min-resolution: $retina-dpi), (max-resolution: retina-dppx) {
+      background: url(..//img/kitchen-desktop@2x.jpg) no-repeat top center;
+      background-size: cover;
+      }
+    }
+    &__request {
+      width: 424px;
+    }
+    &__title {
+      margin-top: 0;
+      text-align: left;
+      font-size: 32px;
+    }
+    &__text {
+      font-size: 14px;
+      text-align: left;
+    }
+    &__form {
+      padding-bottom: 40px;
+    }
+    &__button {
+      background-color: transparent;
+      border: 2px solid $white;
+      cursor: pointer;
+        &:hover {
+          background-color: $orange;
+        }
+    }
+    &__notification {
+      font-size: 14px;
+    }
+  }
+}

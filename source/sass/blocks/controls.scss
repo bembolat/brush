@@ -11,5 +11,6 @@
   }
   & input:checked + .controls__item {
     background-color: $black;
+    transition: all 1s;
   }
 }
