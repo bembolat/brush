@@ -1,15 +1,18 @@
 .contacts {
   padding-bottom: 90px;
-  background: url(..//img/kitchen-tablet@1x.jpg) no-repeat top center;
+  background: url(../img/kitchen-tablet@1x.jpg) no-repeat top center;
   background-size: cover;
   @media (min-resolution: retina-dpi), (max-resolution: retina-dppx) {
-    background: url(..//img/kitchen-tablet@2x.jpg) no-repeat top center;
+    background: url(../img/kitchen-tablet@2x.jpg) no-repeat top center;
     background-size: cover;
   }
   &__request {
     width: 293px;
     margin: 0 auto;
     padding-top: 70px;
+  }
+  &__image {
+    display: none;
   }
   &__title {
     font-family: "Playfair Display";
@@ -89,6 +92,7 @@
     }
     &__image {
       position: absolute;
+      display: block;
       top: 60px;
       right: 15px;
       &--phone {
@@ -116,10 +120,10 @@
     &__wrap-image {
       display: block;
       width: 50%;
-      background: url(..//img/kitchen-desktop@1x.jpg) no-repeat top center;
+      background: url(../img/kitchen-desktop@1x.jpg) no-repeat top center;
       background-size: cover;
       @media (min-resolution: $retina-dpi), (max-resolution: retina-dppx) {
-      background: url(..//img/kitchen-desktop@2x.jpg) no-repeat top center;
+      background: url(../img/kitchen-desktop@2x.jpg) no-repeat top center;
       background-size: cover;
       }
     }

@@ -16,9 +16,14 @@
     transform: translate(-50%,-50%);
     z-index: -1;
     &__item {
-      display: none;
+      width: 100%;
+      max-width: 1154px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s;
       &--active {
-        display: block;
+        opacity: 1 !important;
+        transition: opacity 2s;
       }
     }
     &__list {

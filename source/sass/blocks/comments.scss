@@ -1,0 +1,92 @@
+.comments {
+  width: 293px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  &__title {
+    @include font(45px,50px,700);
+    font-family: "Playfair Display";
+    color: $blue-font;
+    text-align: center;
+  }
+  &__list {
+    padding: 0;
+  }
+  &__head {
+    @include font(24px,30px,700);
+    text-align: center;
+  }
+  &__subhead {
+    font-size: 18px;
+    color: $orange-font;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  &__text {
+    @include font(20px,30px,300);
+    color: $grey-font;
+    text-align: center;
+  }
+  &__item {
+    position:relative;
+    display: none;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 190px;
+    background-color: #fff;
+  }
+  &__image {
+    position: absolute;
+    top: -50px;
+    left: 28px;
+  }
+  &__slider {
+  margin-top: 90px;
+  }
+  &__controls {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .comments {
+    width: 696px;
+  &__item {
+    width: 651px;
+    margin-left: 0;
+    padding-left: 70px;
+    padding-top: 0;
+  }
+  &__text  {
+    width: 440px;
+    text-align: left;
+    font-size: 16px;
+  }
+  &__head {
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 22px;
+  }
+  &__subhead {
+    text-align: left;
+    margin-top: 0;
+    font-size: 16px;
+  }
+  &__image {
+    left: 520px;
+    top: 20px;
+  }
+}
+}
+
+@media (min-width: $desktop) {
+  .comments {
+    width: 1154px;
+    border-right: 1px solid #f1efe9;
+    border-left: 1px solid #f1efe9;
+    &__item {
+      margin: auto;
+    }
+  }
+}

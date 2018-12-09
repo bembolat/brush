@@ -115,6 +115,10 @@
       top: 50%;
       transform: translate(-50%,-50%);
       cursor: pointer;
+        &:active {
+          width: 84px;
+          height: 84px;
+        }
         &::after,&::before {
           @include pseudo-element(30px,2px);
           background-color: $white;

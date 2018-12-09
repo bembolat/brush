@@ -13,7 +13,7 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-header__menu menu menu--closed">
+      <nav class="main-header__menu menu menu--no-js">
         <ul class="menu__static">
           <li class="menu__logo"><a href="#" class="menu__logo-link"><picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.png"><img class="menu__logo-image" src="img/logo.png" alt="logo-header" width="77" height="23">
@@ -22,12 +22,12 @@
           <li class="menu__phone"><a href="#" class="menu__phone-link">+7 (800) 823  48 88</a></li>
         </ul>
         <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link menu__link--active">Главная</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Преимущества</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Наши услуги</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+          <li class="menu__item"><a href="#main" class="menu__link menu__link--active">Главная</a></li>
+          <li class="menu__item"><a href="#advantages" class="menu__link">Преимущества</a></li>
+          <li class="menu__item"><a href="#portfolio" class="menu__link">Портфолио</a></li>
+          <li class="menu__item"><a href="#service" class="menu__link">Наши услуги</a></li>
+          <li class="menu__item"><a href="#comments" class="menu__link">Отзывы</a></li>
+          <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
           <li class="menu__item menu__item--social"><div class="social">
             <ul class="social__list">
               <li class="social__item"><a href="" class="social__vk"><img src="..//img/vk-footer.png" alt="vk" class="social__image social__image--vk" width="22" height="14"></a></li>
@@ -35,11 +35,11 @@
               <li class="social__item"><a href="" class="social__facebook"><img src="..//img/facebook-footer.png" alt="fb" class="social__image social__image--fb" width="12" height="22"></a></li></li>
         </ul>
       </nav>
-      <div class="main-header__preview preview">
+      <div class="main-header__preview preview" id="main">
         <div class="preview__wrap">
           <h2 class="preview__title">Дизайн интерьеров</h2>
           <p class="preview__text">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.</p>
-          <a href="" class="preview__link">Заказать дизайн</a>
+          <a href="#contacts" class="preview__link">Заказать дизайн</a>
         </div>
         <div class="preview__social social">
             <ul class="social__list">
@@ -51,12 +51,12 @@
       </div>
       <div class="main-header__slider slider">
         <ul class="slider__list">
-          <li class="slider__item slider__item--active"><picture>
+          <li class="slider__item"><picture>
             <img src="img/slide-1-desktop@1x.jpg" srcset="img/slide-1-desktop@2x.jpg 2x" alt="slider-image">
           </picture></li>
-          <li class="slider__item"><img src="img/slide-1-desktop@1x.jpg" srcset="img/slide-1-desktop@2x.jpg" alt="slider-image"></li>
-          <li class="slider__item"><img src="img/slide-1-desktop@1x.jpg" srcset="img/slide-1-desktop@2x.jpg" alt="slider-image"></li>
-          <li class="slider__item"><img src="img/slide-1-desktop@1x.jpg" srcset="img/slide-1-desktop@2x.jpg" alt="slider-image"></li>
+          <li class="slider__item"><img src="img/slide-2-desktop@1x.jpg" srcset="img/slide-2-desktop@2x.jpg" alt="slider-image"width="1163" height="595"></li>
+          <li class="slider__item"><img src="img/slide-3-desktop@1x.jpg" srcset="img/slide-3-desktop@2x.jpg" alt="slider-image" ></li>
+          <li class="slider__item"><img src="img/slide-4-desktop@1x.jpg" srcset="img/slide-4-desktop@2x.jpg" alt="slider-image"></li>
         </ul>
         <div class="slider__controls controls">
             <input class="visually-hidden" type="radio" id="button-1" name="toggle-sleder" value="1" checked>
@@ -72,7 +72,7 @@
     </header>
     <main>
     <!-- ПРЕИМУЩЕСТВА -->
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <ul class="advantages__list">
           <li class="advantages__item">
             <span class="advantages__number">01</span>
@@ -97,7 +97,7 @@
         </ul>
       </section>
 <!-- ПОРТФОЛИО -->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <h1 class="portfolio__title">Портфолио</h1>
         <nav class="portfolio__menu">
           <ul class="portfolio__list">
@@ -151,69 +151,101 @@
         </div>
       </section>
       <!-- УСЛУГИ -->
-      <section class="service">
+      <section class="service" id="service">
         <h2 class="service__title">Наши услуги</h2>
         <div class="service__wrap">   
           <nav class="service__menu">
             <ul class="service__list">
               <li class="service__item"><a href="" class="service__link">Дизайн жилого помещения</a></li>
               <li class="service__item"><a href="" class="service__link">Дизайн отельных комнат</a></li>
-              <li class="service__item service__item--active"><a href="" class="service__link service__link--active">Дизайн коммерческих объектов</a></li>
+              <li class="service__item service__item--active"><a href="" class="service__link">Дизайн коммерческих объектов</a></li>
               <li class="service__item"><a href="" class="service__link">Ремонт под ключ</a></li>
               <li class="service__item"><a href="" class="service__link">Отделочные работы</a></li>
               <li class="service__item"><a href="" class="service__link">Выезд дизайнера на дом</a></li>
             </ul>
           </nav>
-          <div class="service__block  show">
-            <div class="service__wrap-image">
+          <div class="service__wrap-block">
+            <div class="service__block">
+              <div class="service__wrap-image">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/service-1-desktop@1x.jpg 1x, img/service-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
+                  <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
+                </picture>
+              </div>
+              <div class="service__info">
+                <h2 class="service__title service__title--footer">Дизайн жилого помещения</h2>
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>         
+            </div>
+            <div class="service__block">
+              <div class="service__wrap-image">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/service-2-desktop@1x.jpg 1x, img/service-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
+                  <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
+                </picture>
+              </div>
+              <div class="service__info">
+                <h2 class="service__title service__title--footer">Дизайн отельных комнат</h2>
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+            </div>
+            <div class="service__block show">
+              <div class="service__wrap-image">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/service-3-desktop@1x.jpg 1x, img/service-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
+                  <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
+                </picture>
+              </div>
+              <div class="service__info">
+                <h2 class="service__title service__title--footer">Дизайн коммерческих обектов</h2>
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
+            </div>
+            <div class="service__block">
+              <div class="service__wrap-image">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/service-1-desktop@1x.jpg 1x, img/service-1-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
-                <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
-              </picture>
+                  <source media="(min-width: 1150px)" srcset="img/service-4-desktop@1x.jpg 1x, img/service-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
+                  <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
+                </picture>
+              </div>
+              <div class="service__info">
+                <h2 class="service__title service__title--footer">Ремонт под ключ</h2>
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
             </div>
-            <div class="service__info">
-              <h2 class="service__title service__title--footer">Дизайн жилого помещения</h2>
-              <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-            </div>         
-          </div>
-          <div class="service__block">
-            <div class="service__wrap-image"><img src="" alt="" class="service__image"></div>
-            <div class="service__info">
-              <h2 class="service__title">Дизайн отельных комнат</h2>
-              <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+            <div class="service__block">
+              <div class="service__wrap-image">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/service-1-desktop@1x.jpg 1x, img/service-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
+                  <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
+                </picture>
+              </div>
+              <div class="service__info">
+                <h2 class="service__title service__title--footer">Отделочные работы</h2>
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="service__block">
-            <div class="service__wrap-image"><img src="" alt="" class="service__image"></div>
-            <div class="service__info">
-              <h2 class="service__title service__title--footer">Дизайн коммерческих обектов</h2>
-              <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+            <div class="service__block">
+              <div class="service__wrap-image">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/service-6-desktop@1x.jpg 1x, img/service-6-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/service-1-tablet@1x.jpg 1x, img/service-1-tablet@2x.jpg 2x">
+                  <img src="img/service-1-mobile@1x.jpg" srcset="img/service-1-mobile@2x.jpg 2x" alt="service-image" class="service__image">
+                </picture>
+              </div>
+              <div class="service__info">
+                <h2 class="service__title service__title--footer">Выезд дизайнера на дом</h2>
+                <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
+              </div>
             </div>
+                    </div>
           </div>
-          <div class="service__block">
-            <div class="service__wrap-image"><img src="" alt="" class="service__image"></div>
-            <div class="service__info">
-              <h2 class="service__title service__title--footer">Ремонт под ключ</h2>
-              <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-            </div>
-          </div>
-          <div class="service__block">
-            <div class="service__wrap-image"><img src="" alt="" class="service__image"></div>
-            <div class="service__info">
-              <h2 class="service__title service__title--footer">Отделочные работы</h2>
-              <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
-              </p>
-            </div>
-          </div>
-          <div class="service__block">
-            <div class="service__wrap-image"><img src="" alt="" class="service__image"></div>
-            <div class="service__info">
-              <h2 class="service__title service__title--footer">Выезд дизайнера на дом</h2>
-              <p class="service__text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова</p>
-            </div>
-          </div>
-        </div>
         <div class="service__consultation"><span class="service__span">532 проекта</span><button class="service__button">Консультация</button></div>
       </section>
      <!--  ВИДЕО -->
@@ -256,7 +288,7 @@
         </div>
       </section>
       <!-- КОНТАКТЫ -->
-      <section class="contacts">
+      <section class="contacts" id="contacts">
         <div class="contacts__request">
           <h2 class="contacts__title">Мечтаете об интерьере от BRUSH?</h2>
           <p class="contacts__text">Оставьте контактные данные. Менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
@@ -277,20 +309,20 @@
         </div>
       </section>
       <!-- ОТЗЫВЫ -->
-      <section class="comments">
+      <section class="comments" id="comments">
         <h2 class="comments__title">Отзывы наших клиентов</h2>
         <div class="comments__slider">
           <ul class="comments__list">
-            <li class="comments__item">
+            <li class="comments__item show">
               <h3 class="comments__head">Александра Холодная</h3>
               <h4 class="comments__subhead">Услуга: интерьер детской</h4>
-              <p class="comments__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.В следующий раз обратимся к BRUSH!</p>
-              <img src="" alt="" class="comments__image">
+              <p class="comments__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUSH!</p>
+              <img src="img/user-1-@1x.png" alt="user-image" class="comments__image">
             </li>
             <li class="comments__item">
               <h3 class="comments__head">Александра Холодная</h3>
               <h4 class="comments__subhead">Услуга: интерьер детской</h4>
-              <p class="comments__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели.В следующий раз обратимся к BRUSH!</p>
+              <p class="comments__text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как  мы и хотели. В следующий раз обратимся к BRUSH!</p>
               <img src="" alt="" class="comments__image">
             </li>
             <li class="comments__item">
@@ -307,36 +339,37 @@
             </li>
           </ul>
           <div class="comments__controls controls">
-          <input type="radio" id="button-1">
-          <label for="button-1"></label>
-          <input type="radio" id="button-2">
-          <label for="button-2"></label>
-          <input type="radio" id="button-3">
-          <label for="button-3"></label>
-          <input type="radio" id="button-4">
-          <label for="button-4"></label>
+            <input class="visually-hidden" type="radio" id="button-one" name="toggle-comments" value="one" checked>
+            <label class="controls__item" for="button-one"></label>
+            <input class="visually-hidden" type="radio" id="button-two" name="toggle-comments" value="two">
+            <label class="controls__item" for="button-two"></label>
+            <input class="visually-hidden" type="radio" id="button-three" name="toggle-comments" value="three">
+            <label class="controls__item" for="button-three"></label>
+            <input class="visually-hidden" type="radio" id="button-four" name="toggle-comments" value="four">
+            <label class="controls__item" for="button-four"></label>
         </div>
         </div>
       </section>
       <!-- ФУТЕР -->
       <footer class="main-footer">
-        <div class="footer__wrap">
-          <div class="footer__copyright">
-            <p class="footer__text"></p>
+        <div class="main-footer__wrap">
+          <div class="main-footer__copyright">
+            <p class="main-footer__text">BRUSH interior, 2018 ©</p>
           </div>
-          <div class="footer__social social">
-            <a href="#" class="footer__logo-link"><img src="img/" alt="logo-footer" class="footer__logo-image"></a>
+          <div class="main-footer__social social">
+            <a href="#" class="main-footer__logo-link"><img src="img/logo-footer.png" alt="logo-footer" class="main-footer__logo-image"></a>
             <ul class="social__list">
-              <li class="social__item"><a href="#" class="social__vk"></a></li>
-              <li class="social__item"><a href="#" class="social__instagram"></a></li>
-              <li class="social__item"><a href="#" class="social__facebook"></a></li>
+              <li class="social__item"><a href="#" class="social__vk"><img class="social__vk-img" src="img/vk-footer.png" alt="logo-footer"></a></li>
+              <li class="social__item"><a href="#" class="social__instagram"><img class="social__inst-img" src="img/instagram-footer.png" alt="logo-footer"></a></li>
+              <li class="social__item"><a href="#" class="social__facebook"><img class="social__fb-img" src="img/facebook-footer.png" alt="logo-footer"></a></li>
             </ul>
           </div>
-          <div class="footer__designer">
-            <p class="footer__name">HolodnayaDesign</p>
+          <div class="main-footer__designer">
+            <p class="main-footer__name">HolodnayaDesign</p>
           </div>
         </div>
       </footer>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>

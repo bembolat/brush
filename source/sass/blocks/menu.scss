@@ -11,25 +11,6 @@
   &__phone {
     display: none;
   }
-  &__button {
-    display: block;
-    width: 34px;
-    height: 24px;
-    background: 0 0;
-    border: 0;
-    @include reset;
-  }
-  &__toggle {
-    z-index: 4;
-  }
-  &--closed .menu__button {
-    background: url(..//img/toggle-open.png) no-repeat top center;
-    background-size: cover;
-  }
-  &--opened .menu__button {
-    background: url(..//img/toggle-close.png) no-repeat top center;
-    background-size: cover;
-  }
   &__list {
     position: absolute;
     display: flex;
@@ -44,6 +25,35 @@
     top: 0;
     left: 0;
     z-index: 3;
+  }
+  &__button {
+    display: block;
+    width: 34px;
+    height: 24px;
+    background: 0 0;
+    border: 0;
+    @include reset;
+    cursor: pointer;
+  }
+  &__toggle {
+    z-index: 4;
+  }
+  &__button {
+    background: url(../img/toggle-open.png) no-repeat top center;
+    background-size: cover;
+  }
+  &__list {
+    display: none;
+  }
+  &--opened .menu__button {
+    background: url(../img/toggle-close.png) no-repeat top center;
+    background-size: contain;
+  }
+  &--opened .menu__list {
+    display: flex ;
+  }
+  &--no-js .menu__list{
+    display: flex;
   }
   &__link {
     @include font(20px, 44px, 400);
@@ -107,7 +117,7 @@
       display: block;
       &::before {
         @include pseudo-element(12px, 15px);
-        background: url(..//img/phone.png);
+        background: url(../img/phone.png);
         left: -20px;
         top: 5px;
       }
@@ -117,6 +127,10 @@
         @include font(14px,14px,400);
       }
     }
+    &--opened .menu__button {
+    background: url(../img/toggle-open.png) no-repeat top center;
+    background-size: cover;
+  }
     &__toggle {
       order: -1;
     }
@@ -139,12 +153,19 @@
     padding-top: 65px;
     top: 380px;
     left: 50%;
+    background-color: rgba(17,37,55,.9);
     transform: translate(-50%,-50%);
     z-index: 3;
     }
     &__link {
       font-size: 20px;
       line-height: 62px;
+        &:hover {
+          color: rgba(248,162,90,.5);
+        }
+        &:active {
+          color: rgba(248,162,90,.1);
+        }
     }
     & .social {
       display: none;

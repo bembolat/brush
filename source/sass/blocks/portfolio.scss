@@ -63,6 +63,10 @@
       &__link {
         font-size: 18px;
         padding: 10px 0;
+        &:hover {
+          color: rgba(0,32,58,.8);
+          transition: all 0.7s;
+        }
         &--active {
         border-bottom: 2px solid $black; 
         }

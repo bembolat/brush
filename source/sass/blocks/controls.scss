@@ -9,8 +9,17 @@
     background-color: #cdd3cf;
     cursor: pointer;
   }
-  & input:checked + .controls__item {
-    background-color: $black;
-    transition: all 1s;
-  }
+& #dots li {
+  display:inline-block;
+  border-radius:10px;
+  width:10px;
+  height:10px;
+  margin: 0 5px;
+  border:2px solid #2284A1;
+  background: white;
+  cursor:pointer;
+}
+& #dots li.active {
+  background:#2284A1;
+}
 }
