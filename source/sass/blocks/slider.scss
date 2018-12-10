@@ -1,4 +1,4 @@
-.slider {
+ .slider {
   display: none;
 }
 
@@ -13,18 +13,13 @@
     padding-top: 85px;
     top: 380px;
     left: 50%;
+    text-align: center;
     transform: translate(-50%,-50%);
     z-index: -1;
     &__item {
       width: 100%;
       max-width: 1154px;
-      position: absolute;
-      opacity: 0;
-      transition: opacity 1s;
-      &--active {
-        opacity: 1 !important;
-        transition: opacity 2s;
-      }
+      position: relative;
     }
     &__list {
       width: 100%;
@@ -32,12 +27,14 @@
     }
     & img {
       width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     &__controls {
-      position: absolute;
-      right: 0;
-      bottom: 10px;
-      right: 103px;
+      top: 95%;
+      right: 150px;
     }
   }
-}
+} 
+

@@ -1,25 +1,20 @@
 .controls {
+  position: absolute;
   display: flex;
   justify-content: space-between;
+  padding: 0;
   width: 145px;
-  &__item {
+  z-index: 5;
+  & li {
     display: block;
     width: 25px;
-    height: 3px;
-    background-color: #cdd3cf;
+    height: 10px;
     cursor: pointer;
+    border-top: 3px solid #cdd3cf;
+    z-index: 5;
   }
-& #dots li {
-  display:inline-block;
-  border-radius:10px;
-  width:10px;
-  height:10px;
-  margin: 0 5px;
-  border:2px solid #2284A1;
-  background: white;
-  cursor:pointer;
-}
-& #dots li.active {
-  background:#2284A1;
+
+& li.active {
+  border-color: #2284A1;
 }
 }
