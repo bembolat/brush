@@ -67,7 +67,7 @@ gulp.task("style", function () {
 
 gulp.task("serve", function() {
   server.init({
-    server: "source/",
+    server: "docs/",
     notify: false,
     open: true,
     cors: true,

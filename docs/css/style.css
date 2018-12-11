@@ -1107,7 +1107,7 @@ button {
 
 .slider-bar__tab {
   position: absolute;
-  display: block;
+  display: none;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -1138,6 +1138,7 @@ button {
     width: 1156px;
     margin: 0 auto; }
     .slider-bar__tab {
+      display: block;
       left: -30px;
       bottom: 90px;
       -webkit-transform: rotate(-90deg);

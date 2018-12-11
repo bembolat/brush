@@ -19,7 +19,7 @@
     }
     &__tab {
       position: absolute;
-      display: block;
+      display: none;
       @include font(18px,20px,700);
       color: $black;
       bottom: -50px;
@@ -53,6 +53,7 @@
     width: 1156px;
     margin: 0 auto;
     &__tab {
+      display: block;
       left: -30px;
       bottom: 90px;
       transform: rotate(-90deg);
