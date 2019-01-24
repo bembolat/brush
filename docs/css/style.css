@@ -300,6 +300,7 @@ template {
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local("Playfair Display Regular"), local("PlayfairDisplay-Regular"), url("../fonts/playfair-display-v13-cyrillic-regular.woff2") format("woff2"), url("../fonts/playfair-display-v13-cyrillic-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
@@ -308,6 +309,7 @@ template {
   font-family: 'Playfair Display';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local("Playfair Display Bold"), local("PlayfairDisplay-Bold"), url("../fonts/playfair-display-v13-cyrillic-700.woff2") format("woff2"), url("../fonts/playfair-display-v13-cyrillic-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
@@ -316,6 +318,7 @@ template {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local("Raleway Light"), local("Raleway-Light"), url("../fonts/raleway-v12-latin-300.woff2") format("woff2"), url("../fonts/raleway-v12-latin-300.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
@@ -324,6 +327,7 @@ template {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local("Raleway"), local("Raleway-Regular"), url("../fonts/raleway-v12-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v12-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
@@ -332,6 +336,7 @@ template {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local("Raleway Bold"), local("Raleway-Bold"), url("../fonts/raleway-v12-latin-700.woff2") format("woff2"), url("../fonts/raleway-v12-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
