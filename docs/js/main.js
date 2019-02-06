@@ -49,7 +49,7 @@ function nextSlide() {
         serviceBlock[y].classList.add("show");
       }
     }
-})
+});
 }
 
 //jQuery
@@ -96,17 +96,51 @@ function nextSlide() {
     moveTo(i);
   });
 
-  $("#prev").click(function () {
+  $("#prev").hide().click(function () {
     moveTo('prev');
   });
 
-  $("#next").click(function () {
+  $("#next").hide().click(function () {
     moveTo('next');
   });
   
   //initialize slider on load
   moveTo('next');
 });
+
+
+  //Ajax отправка формы
+$( document ).ready(function() {
+$(".contacts__form-close").click(function(e) {
+  e.preventDefault();
+  $(".contacts__request").removeClass("target");
+
+})
+
+
+
+
+$(".contacts__form").submit(function(e) {
+        e.preventDefault(); 
+        $(".contacts__request").addClass("target");
+        var $form = $(this);
+        $.ajax({
+          url: $form.attr("action"),
+          type: $form.attr("method"),
+          dataType: "html",
+          data: $form.serialize(),
+        success: function(data) { //Данные отправлены успешно
+            var result = $.parseJSON(data);
+            $(".contacts__caption").html("Спасибо за обращение, " + "<span>" + result.name_user + "</span>" + "!");
+            $(".contacts__text--result").html("В ближайшее время, мы свяжемся с вами по оставленному номеру <em>"+ result.tel_user + "</em> .<br>" + " А на вашу почту: <em>" + result.email_user + "</em> уже отправленно письмо с нашим прейскурантом");
+        },
+        error: function(data) { // Данные не отправлены
+            $(".contacts__text--result").html("Ошибка. Данные не отправленны, попробуйте еще раз.");
+        }
+      });         
+  });      
+});
+
 
 //Кнопка вверх
 (function() {
@@ -135,5 +169,5 @@ function nextSlide() {
 
   window.addEventListener('scroll', trackScroll);
   goTopBtn.addEventListener('click', backToTop);
-})();
+});
 

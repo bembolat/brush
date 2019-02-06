@@ -23,7 +23,7 @@
             <img class="menu__logo-image" src="img/logo.png" alt="logo-header" width="77" height="23">
           </picture></a></li>
           <li class="menu__toggle"><button class="menu__button"></button></li>
-          <li class="menu__phone"><a href="tel:+78008230000" class="menu__phone-link">+7 (800) 823  48 88</a></li>
+          <li class="menu__phone"><a href="tel:+73433797655" class="menu__phone-link">+7 (343) 379 76 55</a></li>
         </ul>
         <ul class="menu__list">
           <li class="menu__item"><a href="#main" class="menu__link menu__link--active">Главная</a></li>
@@ -43,7 +43,7 @@
       <div class="main-header__preview preview" id="main">
         <div class="preview__wrap">
           <h2 class="preview__title">Studio "Brush"</h2>
-          <p class="preview__text">Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.</p>
+          <p class="preview__text">Студия базируется в Екатеринбурге<br>на ул. Малышева №8</p>
           <a href="#contacts" class="preview__link">Заказать дизайн</a>
         </div>
         <div class="preview__social social">
@@ -331,21 +331,32 @@
       <!-- КОНТАКТЫ -->
       <section class="contacts" id="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__request">
-          <h2 class="contacts__title">Мечтаете об интерьере от BRUSH?</h2>
-          <p class="contacts__text">Оставьте контактные данные. Менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
-          <form action="get" class="contacts__form">
-            <fieldset class="contacts__group">
-              <input type="text" placeholder="Имя*">
-              <input type="text" placeholder="Телефон*">
-              <input type="text" placeholder="E-mail">
-            </fieldset>
-            <button class="contacts__button">Отправить</button>
-            <p class="contacts__notification">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональнх данных</p>
-            <img src="img/name-icon.png" alt="icon-image" class="contacts__image contacts__image--name">
-            <img src="img/phone-icon.png" alt="icon-image" class="contacts__image contacts__image--phone">
-            <img src="img/email-icon.png" alt="icon-image" class="contacts__image contacts__image--email">
-          </form>
+        <div class="contacts__container">
+          <div class="contacts__request">
+            <div class="contacts__wrap-form">
+              <h2 class="contacts__title">Мечтаете об интерьере от BRUSH?</h2>
+              <p class="contacts__text">Оставьте контактные данные. Менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+              <form method="post" action="action_ajax_form.php" class="contacts__form">
+                <fieldset class="contacts__group">
+                  <input type="text" name="name" placeholder="Имя*" required>
+                  <input type="tel" name="tel" placeholder="Телефон*" title="The number must contain 11 digits and start with 7" required>
+                  <input type="email" name="email" placeholder="E-mail">
+                </fieldset>
+                <button class="contacts__button">Отправить</button>
+                <p class="contacts__notification">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональнх данных</p>
+                <img src="img/name-icon.png" alt="icon-image" class="contacts__image contacts__image--name">
+                <img src="img/phone-icon.png" alt="icon-image" class="contacts__image contacts__image--phone">
+                <img src="img/email-icon.png" alt="icon-image" class="contacts__image contacts__image--email">
+              </form>
+            </div>
+            <div class="contacts__form-result">
+              <button class="contacts__form-close button"></button>
+              <div class="contacts__wrap-text">
+                <h3 class="contacts__caption"></h3>
+                <p class="contacts__text contacts__text--result">Свойство определяет, будет ли видна пользователю обратная сторона преобразованного элемента. У непреобразованного элемента к пользователю обращена передняя сторона. Не наследуется.</p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="contacts__wrap-image">
         </div>
